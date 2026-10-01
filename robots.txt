@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /student-navigator/404.html
+
+Sitemap: https://xomyaxx.github.io/student-navigator/sitemap.xml

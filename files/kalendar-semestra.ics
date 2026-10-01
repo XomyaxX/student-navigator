@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Student Navigator//RU
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Семестр — Студент.Навигатор
+BEGIN:VEVENT
+UID:sn-20260901-0@student-navigator
+DTSTAMP:20261001T101502Z
+DTSTART;VALUE=DATE:20260901
+SUMMARY:Начало осеннего семестра
+DESCRIPTION:Даты ориентировочные — сверьте с графиком учебного процесса вашего вуза.
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Начало осеннего семестра
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sn-20261020-1@student-navigator
+DTSTAMP:20261001T101502Z
+DTSTART;VALUE=DATE:20261020
+SUMMARY:Контрольная неделя (ориентир)
+DESCRIPTION:Даты ориентировочные — сверьте с графиком учебного процесса вашего вуза.
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Контрольная неделя (ориентир)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sn-20261201-2@student-navigator
+DTSTAMP:20261001T101502Z
+DTSTART;VALUE=DATE:20261201
+SUMMARY:Сдать курсовые работы (ориентир)
+DESCRIPTION:Даты ориентировочные — сверьте с графиком учебного процесса вашего вуза.
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Сдать курсовые работы (ориентир)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sn-20261215-3@student-navigator
+DTSTAMP:20261001T101502Z
+DTSTART;VALUE=DATE:20261215
+SUMMARY:Зачётная неделя (ориентир)
+DESCRIPTION:Даты ориентировочные — сверьте с графиком учебного процесса вашего вуза.
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Зачётная неделя (ориентир)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sn-20270109-4@student-navigator
+DTSTAMP:20261001T101502Z
+DTSTART;VALUE=DATE:20270109
+SUMMARY:Начало зимней сессии (ориентир)
+DESCRIPTION:Даты ориентировочные — сверьте с графиком учебного процесса вашего вуза.
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Начало зимней сессии (ориентир)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sn-20270207-5@student-navigator
+DTSTAMP:20261001T101502Z
+DTSTART;VALUE=DATE:20270207
+SUMMARY:Начало весеннего семестра (ориентир)
+DESCRIPTION:Даты ориентировочные — сверьте с графиком учебного процесса вашего вуза.
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Начало весеннего семестра (ориентир)
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Студент.Навигатор — полезное для студентов</title>
+  <meta name="description" content="Советы по учёбе и сессии, калькулятор среднего балла, помодоро-таймер, шаблоны отчётов по ГОСТ и полезные ссылки для студентов.">
+  <meta name="author" content="Гирсов Валерий Александрович">
+  <link rel="canonical" href="https://xomyaxx.github.io/student-navigator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Студент.Навигатор">
+  <meta property="og:title" content="Студент.Навигатор — полезное для студентов">
+  <meta property="og:description" content="Советы по учёбе и сессии, калькулятор среднего балла, помодоро-таймер, шаблоны отчётов по ГОСТ и полезные ссылки для студентов.">
+  <meta property="og:url" content="https://xomyaxx.github.io/student-navigator/">
+  <meta property="og:image" content="https://xomyaxx.github.io/student-navigator/assets/img/og-image.png">
+  <meta name="theme-color" content="#3b5bdb">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <script src="assets/js/counters-config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+
+  <!-- ===================== МЕСТА ДЛЯ СЧЁТЧИКОВ (в <head>) ===================== -->
+  <!-- COUNTER: yandex -->
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113247787', 'ym');
+
+      ym(113247787, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <!-- /Yandex.Metrika counter -->
+  <!-- /COUNTER: yandex -->
+
+  <!-- COUNTER: top100 -->
+<!-- Top100 (Kraken) Counter -->
+<script>
+    (function (w, d, c) {
+    (w[c] = w[c] || []).push(function() {
+        var options = {
+            project: 7752641,
+        };
+        try {
+            w.top100Counter = new top100(options);
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src =
+    (d.location.protocol == "https:" ? "https:" : "http:") +
+    "//st.top100.ru/top100/top100.js";
+
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(window, document, "_top100q");
+</script>
+<!-- END Top100 (Kraken) Counter -->
+  <!-- /COUNTER: top100 -->
+
+  <!-- COUNTER: mailru -->
+  <!-- Сюда: код Top.Mail.ru (Рейтинг Mail.ru) или веб-счётчик MyTracker/пиксель VK Рекламы (тот же _tmr).
+       ID впишите в assets/js/counters-config.js (mailruId). -->
+  <!-- /COUNTER: mailru -->
+  <!-- ========================================================================== -->
+</head>
+<body class="">
+
+<!-- COUNTER: yandex-noscript -->
+<!-- Yandex.Metrika counter (noscript) -->
+<noscript><div><img src="https://mc.yandex.ru/watch/113247787" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter (noscript) -->
+<!-- /COUNTER: yandex-noscript -->
+<!-- COUNTER: top100-noscript -->
+<!-- Top100 (Kraken) Counter (noscript) -->
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid=7752641" alt="Топ-100" />
+</noscript>
+<!-- END Top100 (Kraken) Counter (noscript) -->
+<!-- /COUNTER: top100-noscript -->
+<!-- COUNTER: mailru-noscript -->
+<!-- Сюда: <noscript>-часть Top.Mail.ru (пиксель top-fwz1.mail.ru/counter?id=ID) -->
+<!-- /COUNTER: mailru-noscript -->
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="site-header" data-blockname="header">
+  <div class="container header-row">
+    <a class="logo" href="index.html" data-blockname="header::логотип">
+      <img src="assets/img/logo.svg" width="36" height="36" alt="">
+      <span>Студент.Навигатор<small>полезное для студентов</small></span>
+    </a>
+    <button class="icon-btn burger" aria-label="Меню" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="nav" id="site-nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="index.html" data-blockname="header::меню::Главная" aria-current="page">Главная</a></li>
+        <li><a href="articles.html" data-blockname="header::меню::Статьи">Статьи</a></li>
+        <li><a href="guide.html" data-blockname="header::меню::Гид по сессии">Гид по сессии</a></li>
+        <li><a href="tools.html" data-blockname="header::меню::Инструменты">Инструменты</a></li>
+        <li><a href="resources.html" data-blockname="header::меню::Материалы">Материалы</a></li>
+        <li><a href="faq.html" data-blockname="header::меню::Вопросы">Вопросы</a></li>
+        <li><a href="about.html" data-blockname="header::меню::О проекте">О проекте</a></li>
+        <li><a href="contacts.html" data-blockname="header::меню::Контакты">Контакты</a></li>
+      </ul>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" aria-label="Переключить тёмную тему" title="Тёмная/светлая тема">◐</button>
+  </div>
+</header>
+<section class="hero" data-blockname="главная::первый экран"><div class="container hero-grid">
+  <div>
+    <span class="tag">Для студентов 1–4 курса</span>
+    <h1>Учиться проще, когда есть навигатор</h1>
+    <p class="lead">Советы по учёбе и сессии, бесплатные инструменты, шаблоны отчётов и проверенные ссылки — в одном месте и без воды.</p>
+    <div class="actions">
+      <a class="btn" href="guide.html" data-goal="cta_guide_click" data-goal-params='{"place":"hero"}' data-blockname="главная::первый экран::Читать гид">Читать гид по сессии</a>
+      <a class="btn secondary" href="resources.html" data-goal="cta_resources_click" data-goal-params='{"place":"hero"}' data-blockname="главная::первый экран::Шаблоны">Скачать шаблоны</a>
+    </div>
+    <p class="meta" style="margin-top:18px">До ближайшей сессии ≈ <b id="session-countdown">—</b> дн. Успеете подготовиться!</p>
+  </div>
+  <div><img src="assets/img/hero.svg" width="520" height="420" alt="Стол студента с ноутбуком, книгами и календарём"></div>
+</div></section>
+<main id="main">
+<section><div class="container">
+  <div class="grid c4">
+    <div class="card" data-blockname="главная::преимущества::статьи"><svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#dbe4ff"/><path d="M12 14h10a4 4 0 0 1 4 4v18a3 3 0 0 0-3-3H12Z" fill="#4c6ef5"/><path d="M36 14H26a4 4 0 0 0-4 4v18a3 3 0 0 1 3-3h11Z" fill="#748ffc"/></svg><h3>Статьи</h3><p>Короткие практичные материалы об учёбе, IT, финансах и карьере.</p><a href="articles.html">Читать →</a></div>
+    <div class="card" data-blockname="главная::преимущества::гид"><svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fff3bf"/><circle cx="24" cy="24" r="12" fill="none" stroke="#f59f00" stroke-width="3"/><path d="M24 17v7l5 3" stroke="#f59f00" stroke-width="3" stroke-linecap="round" fill="none"/></svg><h3>Гид по сессии</h3><p>Пошаговый план подготовки: от месяца до экзамена до пересдачи.</p><a href="guide.html">Открыть →</a></div>
+    <div class="card" data-blockname="главная::преимущества::инструменты"><svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#d3f9d8"/><rect x="15" y="11" width="18" height="26" rx="3" fill="#2f9e44"/><rect x="18" y="14" width="12" height="5" rx="1" fill="#d3f9d8"/><g fill="#d3f9d8"><circle cx="20" cy="25" r="1.6"/><circle cx="24" cy="25" r="1.6"/><circle cx="28" cy="25" r="1.6"/><circle cx="20" cy="31" r="1.6"/><circle cx="24" cy="31" r="1.6"/><circle cx="28" cy="31" r="1.6"/></g></svg><h3>Инструменты</h3><p>Калькулятор среднего балла и помодоро-таймер прямо в браузере.</p><a href="tools.html">Попробовать →</a></div>
+    <div class="card" data-blockname="главная::преимущества::файлы"><svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#e5dbff"/><path d="M16 11h11l7 7v19H16Z" fill="#7048e8"/><path d="M27 11v7h7" fill="#b197fc"/><path d="M20 26h10M20 30h10" stroke="#fff" stroke-width="2"/></svg><h3>Шаблоны</h3><p>Отчёт по ГОСТ, чек-лист сессии, календарь семестра, планер.</p><a href="resources.html#downloads">Скачать →</a></div>
+  </div>
+</div></section>
+<section><div class="container">
+  <div class="section-title"><h2>Свежие статьи</h2><a href="articles.html">Все статьи →</a></div>
+  <div class="grid c3">
+  <article class="card" data-blockname="главная::статьи::Как прочитать научную статью за 20 минут">
+    <a class="cover" href="articles.html#read-paper" tabindex="-1"><img src="assets/img/cover-read-paper.svg" width="360" height="200" alt="" loading="lazy"></a>
+    <span class="tag">Учёба</span> <span class="meta">· 5 мин чтения</span>
+    <h3><a href="articles.html#read-paper">Как прочитать научную статью за 20 минут</a></h3>
+    <p>Метод трёх проходов: сначала каркас, потом суть, детали — только если статья действительно нужна.</p>
+  </article>
+  <article class="card" data-blockname="главная::статьи::Отчёт по ГОСТ 7.32–2017: 10 частых ошибок">
+    <a class="cover" href="articles.html#gost-report" tabindex="-1"><img src="assets/img/cover-gost-report.svg" width="360" height="200" alt="" loading="lazy"></a>
+    <span class="tag">Учёба</span> <span class="meta">· 6 мин чтения</span>
+    <h3><a href="articles.html#gost-report">Отчёт по ГОСТ 7.32–2017: 10 частых ошибок</a></h3>
+    <p>Поля, нумерация, подписи рисунков и список источников — то, за что чаще всего возвращают отчёт.</p>
+  </article>
+  <article class="card" data-blockname="главная::статьи::Git для курсовой: минимальный набор команд">
+    <a class="cover" href="articles.html#git-coursework" tabindex="-1"><img src="assets/img/cover-git-coursework.svg" width="360" height="200" alt="" loading="lazy"></a>
+    <span class="tag">IT</span> <span class="meta">· 5 мин чтения</span>
+    <h3><a href="articles.html#git-coursework">Git для курсовой: минимальный набор команд</a></h3>
+    <p>Восемь команд, которые спасут код курсовой от «финальная_версия_2_точно_последняя.zip».</p>
+  </article>
+  </div>
+</div></section>
+<section><div class="container">
+  <div class="grid c2">
+    <div class="card" data-blockname="главная::промо::гид">
+      <span class="tag">Лонгрид</span>
+      <h3>Сессия без паники: большой гид</h3>
+      <p>План на 4 недели, техники запоминания, что делать накануне и на самом экзамене, как пройти пересдачу. Читается за 15 минут — экономит недели.</p>
+      <a class="btn" href="guide.html" data-goal="cta_guide_click" data-goal-params='{"place":"promo"}'>Читать гид</a>
+    </div>
+    <div class="card" data-blockname="главная::промо::калькулятор">
+      <span class="tag">Инструмент</span>
+      <h3>Сколько у меня средний балл?</h3>
+      <p>Посчитайте простой и взвешенный по зачётным единицам средний балл и узнайте, хватает ли его на повышенную стипендию.</p>
+      <a class="btn secondary" href="tools.html#gpa" data-goal="cta_tools_click">Открыть калькулятор</a>
+    </div>
+  </div>
+</div></section>
+<section><div class="container">
+  <div class="grid c3" style="text-align:center">
+    <div class="card"><div class="stat">7</div><p>практичных статей</p></div>
+    <div class="card"><div class="stat">5</div><p>бесплатных шаблонов и файлов</p></div>
+    <div class="card"><div class="stat">20+</div><p>проверенных полезных ссылок</p></div>
+  </div>
+</div></section>
+<section><div class="container" style="max-width:760px">
+<div class="card form-wrap" data-blockname="главная::подписка">
+  <h3>Подборка полезного раз в две недели</h3>
+  <p>Одно короткое письмо: новые статьи, шаблоны и напоминания о дедлайнах сессии. Без спама.</p>
+  <form class="inline-form" data-form="subscribe" novalidate autocomplete="on" action="#" aria-label="Подписка на рассылку">
+    <input type="email" name="email" placeholder="you@example.ru" aria-label="E-mail" data-required="Укажите e-mail" class="ym-disable-keys">
+    <button class="btn" type="submit">Подписаться</button>
+    <div class="error-msg" data-error-for="email" style="flex-basis:100%"></div>
+  </form>
+  <div class="form-success callout ok" tabindex="-1"><b>Готово!</b> Спасибо за подписку. (Демо: адрес нигде не сохраняется.) <button type="button" class="btn small secondary" data-form-again>Ещё адрес</button></div>
+</div>
+</div></section>
+</main>
+<footer class="site-footer" data-blockname="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Студент.Навигатор</h4>
+        <p style="color:var(--muted);margin:0 0 8px">Практичные советы, инструменты и шаблоны для студентов: как учиться, сдавать сессию и не выгорать.</p>
+        <p style="margin:0"><a href="about.html#privacy">Политика конфиденциальности</a></p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="articles.html" data-blockname="footer::меню::Статьи">Статьи</a></li>
+          <li><a href="guide.html" data-blockname="footer::меню::Гид">Гид по сессии</a></li>
+          <li><a href="tools.html" data-blockname="footer::меню::Инструменты">Инструменты</a></li>
+          <li><a href="resources.html" data-blockname="footer::меню::Материалы">Материалы и файлы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul>
+          <li><a href="contacts.html" data-blockname="footer::меню::Контакты">Обратная связь</a></li>
+          <li><a href="faq.html" data-blockname="footer::меню::FAQ">Частые вопросы</a></li>
+          <li><a href="mailto:hello@student-navigator.example">hello@student-navigator.example</a></li>
+        </ul>
+      </div>
+    </div>
+
+      <!-- ===================== ИНФОРМЕРЫ СЧЁТЧИКОВ (подвал) ===================== -->
+      <div class="counters" aria-label="Счётчики посещаемости" data-blockname="footer::счётчики">
+        <span class="counter-slot" id="liveinternet_counter" data-label="LiveInternet 88×31"><!-- COUNTER: liveinternet --><!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+target="_blank"><img id="licnt08D5" width="88" height="31" style="border:0" 
+title="LiveInternet: number of pageviews and visitors for 24 hours is shown"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licnt08D5").src=
+"https://counter.yadro.ru/hit?t52.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+ ";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet--><!-- /COUNTER: liveinternet --></span>
+        <span class="counter-slot" id="top100_widget" data-label="Рамблер/Топ-100"><!-- COUNTER: top100-widget --><!-- Виджет Топ-100 отрисуется сюда (top100Counter.drawLogoTo('top100_widget') или параметр widget в коде) --><!-- /COUNTER: top100-widget --></span>
+        <span class="counter-slot" id="mailru_logo" data-label="Рейтинг Mail.ru"><!-- COUNTER: mailru-logo --><!-- Сюда: логотип/информер Top.Mail.ru (если доступен) --><!-- /COUNTER: mailru-logo --></span>
+        <span class="counter-slot" id="yandex_informer" data-label="Яндекс Метрика"><!-- COUNTER: yandex-informer --><!-- Сюда: информер Яндекс Метрики 88×31 (Настройка → Информер) --><!-- /COUNTER: yandex-informer --></span>
+      </div>
+      <!-- ========================================================================= -->
+    <div class="copyright">© 2026 Студент.Навигатор. Автор — Гирсов Валерий Александрович. Учебный проект по дисциплине «Веб-аналитика», Московский Политех. Сайт использует сервисы веб-аналитики и cookies — <a href="about.html#privacy">подробнее</a>.</div>
+  </div>
+</footer>
+<button class="btn small to-top" aria-label="Наверх">↑ Наверх</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
