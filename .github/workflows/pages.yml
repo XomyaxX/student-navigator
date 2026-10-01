@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build and publish to gh-pages
 
 on:
   push:
@@ -6,20 +6,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -39,13 +34,12 @@ jobs:
             --window-size=1200,630 --screenshot=_site/assets/img/og-image.png "file://$PWD/_build/og.html"
           ls -la _site _site/files _site/assets/img
 
-      - uses: actions/configure-pages@v5
+      - name: Publish _site to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          enablement: true
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: true
+          enable_jekyll: false
+          commit_message: "Deploy site from ${{ github.sha }}"
