@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Инструменты: калькулятор среднего балла и помодоро-таймер — Студент.Навигатор</title>
+  <meta name="description" content="Бесплатный калькулятор среднего балла с учётом зачётных единиц и помодоро-таймер для учёбы — работают в браузере без регистрации.">
+  <meta name="author" content="Гирсов Валерий Александрович">
+  <link rel="canonical" href="https://xomyaxx.github.io/student-navigator/tools.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Студент.Навигатор">
+  <meta property="og:title" content="Инструменты: калькулятор среднего балла и помодоро-таймер — Студент.Навигатор">
+  <meta property="og:description" content="Бесплатный калькулятор среднего балла с учётом зачётных единиц и помодоро-таймер для учёбы — работают в браузере без регистрации.">
+  <meta property="og:url" content="https://xomyaxx.github.io/student-navigator/tools.html">
+  <meta property="og:image" content="https://xomyaxx.github.io/student-navigator/assets/img/og-image.png">
+  <meta name="theme-color" content="#3b5bdb">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <script src="assets/js/counters-config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+
+  <!-- ===================== МЕСТА ДЛЯ СЧЁТЧИКОВ (в <head>) ===================== -->
+  <!-- COUNTER: yandex -->
+  <!-- Сюда: код Яндекс Метрики (tag.js). В настройках счётчика включить: Вебвизор, карта скроллинга,
+       аналитика форм; в коде должны быть clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true.
+       Номер счётчика также впишите в assets/js/counters-config.js (yandexId). -->
+  <!-- /COUNTER: yandex -->
+
+  <!-- COUNTER: top100 -->
+  <!-- Сюда: код Рамблер/Топ-100 («Статистика от SberAds»). В «Расширенных возможностях» включить
+       учёт хэшей (trackHashes:true) и аналитику блоков (attributes_dataset:['blockname'] —
+       элементы сайта уже размечены атрибутом data-blockname). Виджет рисуется в #top100_widget (подвал). -->
+  <!-- /COUNTER: top100 -->
+
+  <!-- COUNTER: mailru -->
+  <!-- Сюда: код Top.Mail.ru (Рейтинг Mail.ru) или веб-счётчик MyTracker/пиксель VK Рекламы (тот же _tmr).
+       ID впишите в assets/js/counters-config.js (mailruId). -->
+  <!-- /COUNTER: mailru -->
+  <!-- ========================================================================== -->
+</head>
+<body class="">
+
+<!-- COUNTER: yandex-noscript -->
+<!-- Сюда: <noscript>-часть Яндекс Метрики (пиксель mc.yandex.ru/watch/ID) -->
+<!-- /COUNTER: yandex-noscript -->
+<!-- COUNTER: mailru-noscript -->
+<!-- Сюда: <noscript>-часть Top.Mail.ru (пиксель top-fwz1.mail.ru/counter?id=ID) -->
+<!-- /COUNTER: mailru-noscript -->
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="site-header" data-blockname="header">
+  <div class="container header-row">
+    <a class="logo" href="index.html" data-blockname="header::логотип">
+      <img src="assets/img/logo.svg" width="36" height="36" alt="">
+      <span>Студент.Навигатор<small>полезное для студентов</small></span>
+    </a>
+    <button class="icon-btn burger" aria-label="Меню" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="nav" id="site-nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="index.html" data-blockname="header::меню::Главная">Главная</a></li>
+        <li><a href="articles.html" data-blockname="header::меню::Статьи">Статьи</a></li>
+        <li><a href="guide.html" data-blockname="header::меню::Гид по сессии">Гид по сессии</a></li>
+        <li><a href="tools.html" data-blockname="header::меню::Инструменты" aria-current="page">Инструменты</a></li>
+        <li><a href="resources.html" data-blockname="header::меню::Материалы">Материалы</a></li>
+        <li><a href="faq.html" data-blockname="header::меню::Вопросы">Вопросы</a></li>
+        <li><a href="about.html" data-blockname="header::меню::О проекте">О проекте</a></li>
+        <li><a href="contacts.html" data-blockname="header::меню::Контакты">Контакты</a></li>
+      </ul>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" aria-label="Переключить тёмную тему" title="Тёмная/светлая тема">◐</button>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-hero"><div class="container">
+  <div class="breadcrumbs"><a href="index.html">Главная</a> / Инструменты</div>
+  <h1>Инструменты</h1>
+  <p>Работают прямо в браузере, ничего не отправляют на сервер и не требуют регистрации.</p>
+</div></div>
+<div class="container">
+<div class="grid c2">
+  <section class="card" id="gpa" data-blockname="инструменты::калькулятор">
+    <h2 style="margin-top:0">Калькулятор среднего балла</h2>
+    <p>Добавьте дисциплины, оценки и трудоёмкость в зачётных единицах (з.е.). Калькулятор покажет обычный и взвешенный средний балл.</p>
+    <form id="gpa-form" novalidate action="#" aria-label="Калькулятор среднего балла">
+      <table class="gpa-table"><thead><tr><th style="text-align:left">Дисциплина</th><th>Оценка</th><th>З.е.</th><th></th></tr></thead><tbody id="gpa-rows"></tbody></table>
+      <p style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <button type="button" class="btn secondary small" id="gpa-add">+ Дисциплина</button>
+        <button type="submit" class="btn small">Рассчитать</button>
+      </p>
+      <div class="result-box" id="gpa-result" aria-live="polite"></div>
+    </form>
+  </section>
+  <section class="card" id="pomodoro" data-blockname="инструменты::таймер">
+    <h2 style="margin-top:0">Помодоро-таймер</h2>
+    <p>25 минут фокуса — 5 минут отдыха. После четырёх «помидоров» — длинный перерыв 15 минут. Подробнее о методе — в <a href="guide.html#pomodoro-technique">гиде</a>.</p>
+    <p class="meta" style="text-align:center;margin:0">Режим: <b id="timer-mode">Фокус</b></p>
+    <div class="timer" id="timer-display" aria-live="off">25:00</div>
+    <p style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+      <button type="button" class="btn" id="timer-start">Старт</button>
+      <button type="button" class="btn secondary" id="timer-pause">Пауза</button>
+      <button type="button" class="btn secondary" id="timer-reset">Сброс</button>
+    </p>
+    <p style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+      <button type="button" class="btn small secondary" data-mode="work">25 мин</button>
+      <button type="button" class="btn small secondary" data-mode="short">5 мин</button>
+      <button type="button" class="btn small secondary" data-mode="long">15 мин</button>
+    </p>
+  </section>
+</div>
+<section class="card" style="margin-top:24px" data-blockname="инструменты::шкала">
+  <h2 style="margin-top:0">Шкала перевода баллов</h2>
+  <p>Во многих вузах используется балльно-рейтинговая система. Типичная шкала перевода (уточняйте в положении своего вуза):</p>
+  <table class="gpa-table" style="max-width:520px">
+    <thead><tr><th style="text-align:left">Баллы</th><th style="text-align:left">Оценка</th></tr></thead>
+    <tbody><tr><td>86–100</td><td>«отлично»</td></tr><tr><td>70–85</td><td>«хорошо»</td></tr><tr><td>51–69</td><td>«удовлетворительно»</td></tr><tr><td>0–50</td><td>«неудовлетворительно»</td></tr></tbody>
+  </table>
+</section>
+</div>
+</main>
+<footer class="site-footer" data-blockname="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Студент.Навигатор</h4>
+        <p style="color:var(--muted);margin:0 0 8px">Практичные советы, инструменты и шаблоны для студентов: как учиться, сдавать сессию и не выгорать.</p>
+        <p style="margin:0"><a href="about.html#privacy">Политика конфиденциальности</a></p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="articles.html" data-blockname="footer::меню::Статьи">Статьи</a></li>
+          <li><a href="guide.html" data-blockname="footer::меню::Гид">Гид по сессии</a></li>
+          <li><a href="tools.html" data-blockname="footer::меню::Инструменты">Инструменты</a></li>
+          <li><a href="resources.html" data-blockname="footer::меню::Материалы">Материалы и файлы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul>
+          <li><a href="contacts.html" data-blockname="footer::меню::Контакты">Обратная связь</a></li>
+          <li><a href="faq.html" data-blockname="footer::меню::FAQ">Частые вопросы</a></li>
+          <li><a href="mailto:hello@student-navigator.example">hello@student-navigator.example</a></li>
+        </ul>
+      </div>
+    </div>
+
+      <!-- ===================== ИНФОРМЕРЫ СЧЁТЧИКОВ (подвал) ===================== -->
+      <div class="counters" aria-label="Счётчики посещаемости" data-blockname="footer::счётчики">
+        <span class="counter-slot" id="liveinternet_counter" data-label="LiveInternet 88×31"><!-- COUNTER: liveinternet --><!-- Сюда: код счётчика LiveInternet (картинка 88×31, ссылка на liveinternet.ru/click) --><!-- /COUNTER: liveinternet --></span>
+        <span class="counter-slot" id="top100_widget" data-label="Рамблер/Топ-100"><!-- COUNTER: top100-widget --><!-- Виджет Топ-100 отрисуется сюда (top100Counter.drawLogoTo('top100_widget') или параметр widget в коде) --><!-- /COUNTER: top100-widget --></span>
+        <span class="counter-slot" id="mailru_logo" data-label="Рейтинг Mail.ru"><!-- COUNTER: mailru-logo --><!-- Сюда: логотип/информер Top.Mail.ru (если доступен) --><!-- /COUNTER: mailru-logo --></span>
+        <span class="counter-slot" id="yandex_informer" data-label="Яндекс Метрика"><!-- COUNTER: yandex-informer --><!-- Сюда: информер Яндекс Метрики 88×31 (Настройка → Информер) --><!-- /COUNTER: yandex-informer --></span>
+      </div>
+      <!-- ========================================================================= -->
+    <div class="copyright">© 2026 Студент.Навигатор. Автор — Гирсов Валерий Александрович. Учебный проект по дисциплине «Веб-аналитика», Московский Политех. Сайт использует сервисы веб-аналитики и cookies — <a href="about.html#privacy">подробнее</a>.</div>
+  </div>
+</footer>
+<button class="btn small to-top" aria-label="Наверх">↑ Наверх</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
