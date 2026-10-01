@@ -37,9 +37,32 @@
   <!-- /COUNTER: yandex -->
 
   <!-- COUNTER: top100 -->
-  <!-- Сюда: код Рамблер/Топ-100 («Статистика от SberAds»). В «Расширенных возможностях» включить
-       учёт хэшей (trackHashes:true) и аналитику блоков (attributes_dataset:['blockname'] —
-       элементы сайта уже размечены атрибутом data-blockname). Виджет рисуется в #top100_widget (подвал). -->
+<!-- Top100 (Kraken) Counter -->
+<script>
+    (function (w, d, c) {
+    (w[c] = w[c] || []).push(function() {
+        var options = {
+            project: 7752641,
+        };
+        try {
+            w.top100Counter = new top100(options);
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src =
+    (d.location.protocol == "https:" ? "https:" : "http:") +
+    "//st.top100.ru/top100/top100.js";
+
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(window, document, "_top100q");
+</script>
+<!-- END Top100 (Kraken) Counter -->
   <!-- /COUNTER: top100 -->
 
   <!-- COUNTER: mailru -->
@@ -55,6 +78,13 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/113247787" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter (noscript) -->
 <!-- /COUNTER: yandex-noscript -->
+<!-- COUNTER: top100-noscript -->
+<!-- Top100 (Kraken) Counter (noscript) -->
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid=7752641" alt="Топ-100" />
+</noscript>
+<!-- END Top100 (Kraken) Counter (noscript) -->
+<!-- /COUNTER: top100-noscript -->
 <!-- COUNTER: mailru-noscript -->
 <!-- Сюда: <noscript>-часть Top.Mail.ru (пиксель top-fwz1.mail.ru/counter?id=ID) -->
 <!-- /COUNTER: mailru-noscript -->
