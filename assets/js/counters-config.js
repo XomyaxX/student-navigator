@@ -4,7 +4,7 @@
  * Номера здесь нужны функции reachGoal(), чтобы отправлять цели/события.
  */
 window.WA_CONFIG = {
-  yandexId: null,   // Яндекс Метрика, например 98765432
+  yandexId: 113247787, // Яндекс Метрика (Вебвизор включён)
   mailruId: null,   // Top.Mail.ru (Рейтинг Mail.ru) или MyTracker web-counter id, например "3512345"
   top100Id: null,   // Рамблер/Топ-100 (Статистика от SberAds) — project id (для справки; события идут через window.top100Counter)
   debug: false      // true или ?debug_goals=1 в адресе: печатать цели в консоль
