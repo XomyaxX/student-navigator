@@ -22,9 +22,18 @@
 
   <!-- ===================== МЕСТА ДЛЯ СЧЁТЧИКОВ (в <head>) ===================== -->
   <!-- COUNTER: yandex -->
-  <!-- Сюда: код Яндекс Метрики (tag.js). В настройках счётчика включить: Вебвизор, карта скроллинга,
-       аналитика форм; в коде должны быть clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true.
-       Номер счётчика также впишите в assets/js/counters-config.js (yandexId). -->
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113247787', 'ym');
+
+      ym(113247787, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <!-- /Yandex.Metrika counter -->
   <!-- /COUNTER: yandex -->
 
   <!-- COUNTER: top100 -->
@@ -40,15 +49,17 @@
   <!-- ========================================================================== -->
 </head>
 <body class="">
-<div class="progress" aria-hidden="true"></div>
+
 <!-- COUNTER: yandex-noscript -->
-<!-- Сюда: <noscript>-часть Яндекс Метрики (пиксель mc.yandex.ru/watch/ID) -->
+<!-- Yandex.Metrika counter (noscript) -->
+<noscript><div><img src="https://mc.yandex.ru/watch/113247787" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter (noscript) -->
 <!-- /COUNTER: yandex-noscript -->
 <!-- COUNTER: mailru-noscript -->
 <!-- Сюда: <noscript>-часть Top.Mail.ru (пиксель top-fwz1.mail.ru/counter?id=ID) -->
 <!-- /COUNTER: mailru-noscript -->
 <a class="skip" href="#main">Перейти к содержимому</a>
-
+<div class="progress" aria-hidden="true"></div>
 <header class="site-header" data-blockname="header">
   <div class="container header-row">
     <a class="logo" href="index.html" data-blockname="header::логотип">
