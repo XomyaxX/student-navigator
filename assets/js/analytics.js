@@ -42,6 +42,9 @@
     } catch (e) {}
     try { if (window.top100Counter && typeof window.top100Counter.trackEvent === 'function') { window.top100Counter.trackEvent(name, params); sent.push('top100'); } } catch (e) {}
     (window.dataLayer = window.dataLayer || []).push({ event: 'reachGoal', goal: name, goalParams: params });
+    // Дополнительные цели MyTracker 3806710 (алиасы к существующим событиям)
+    var tmrAlias = { form_feedback_submit: 'contact_click', contact_link_click: 'contact_click', copy_email: 'contact_click', cta_guide_click: 'guide_open' };
+    if (tmrAlias[name]) { try { (window._tmr = window._tmr || []).push({ id: '3806710', type: 'reachGoal', goal: tmrAlias[name] }); } catch (e) {} }
     if (debug && window.console) console.info('[reachGoal]', name, params, sent.length ? '→ ' + sent.join(', ') : '(счётчики не подключены)');
     return sent;
   }
@@ -93,6 +96,9 @@
     if (!marks.length) window.removeEventListener('scroll', onScroll);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // MyTracker: открытие страницы гида — цель guide_open
+  if (/guide\.html$/.test(location.pathname)) { (window._tmr = window._tmr || []).push({ id: '3806710', type: 'reachGoal', goal: 'guide_open' }); }
 
   // 5) Активное чтение: 60 секунд на странице при видимой вкладке
   var active = 0;

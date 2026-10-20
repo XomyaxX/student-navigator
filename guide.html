@@ -66,8 +66,20 @@
   <!-- /COUNTER: top100 -->
 
   <!-- COUNTER: mailru -->
-  <!-- Сюда: код Top.Mail.ru (Рейтинг Mail.ru) или веб-счётчик MyTracker/пиксель VK Рекламы (тот же _tmr).
-       ID впишите в assets/js/counters-config.js (mailruId). -->
+<!-- mytopf.com counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3806710", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://mytopf.com/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://mytopf.com/counter?id=3806710;js=na" style="position:absolute;left:-9999px;" alt="mytopf.com" /></div></noscript>
+<!-- /mytopf.com counter -->
   <!-- /COUNTER: mailru -->
   <!-- ========================================================================== -->
 </head>
@@ -86,7 +98,7 @@
 <!-- END Top100 (Kraken) Counter (noscript) -->
 <!-- /COUNTER: top100-noscript -->
 <!-- COUNTER: mailru-noscript -->
-<!-- Сюда: <noscript>-часть Top.Mail.ru (пиксель top-fwz1.mail.ru/counter?id=ID) -->
+<!-- MyTracker 3806710: noscript-пиксель внутри блока mytopf.com в <head> -->
 <!-- /COUNTER: mailru-noscript -->
 <a class="skip" href="#main">Перейти к содержимому</a>
 <div class="progress" aria-hidden="true"></div>
