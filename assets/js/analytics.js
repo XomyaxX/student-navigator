@@ -26,6 +26,9 @@
   }
 
   var fired = {};
+  var TMR_ID = String(cfg.mailruId || '3806710');
+  var TMR_ALIAS = { form_feedback_submit: 'contact_click', contact_link_click: 'contact_click', copy_email: 'contact_click', cta_guide_click: 'guide_open' };
+  function tmrGoalName(name) { return TMR_ALIAS[name] || name; }
   function reachGoal(name, params, opts) {
     params = params || {};
     opts = opts || {};
@@ -34,17 +37,16 @@
     var ymId = detectYandexId();
     try { if (typeof window.ym === 'function' && ymId) { window.ym(ymId, 'reachGoal', name, params); sent.push('yandex'); } } catch (e) {}
     try {
-      if (cfg.mailruId) {
-        var t = { id: String(cfg.mailruId), type: 'reachGoal', goal: name };
+      // MyTracker / Top.Mail.ru 3806710: одна отправка, имя цели приводится к каноническому (contact_click, guide_open, scroll_NN)
+      var tn = tmrGoalName(name);
+      if (tn) {
+        var t = { id: TMR_ID, type: 'reachGoal', goal: tn };
         if (typeof params.value === 'number') t.value = params.value;
-        (window._tmr = window._tmr || []).push(t); sent.push('mailru');
+        (window._tmr = window._tmr || []).push(t); sent.push('mytracker:' + tn);
       }
     } catch (e) {}
     try { if (window.top100Counter && typeof window.top100Counter.trackEvent === 'function') { window.top100Counter.trackEvent(name, params); sent.push('top100'); } } catch (e) {}
     (window.dataLayer = window.dataLayer || []).push({ event: 'reachGoal', goal: name, goalParams: params });
-    // Дополнительные цели MyTracker 3806710 (алиасы к существующим событиям)
-    var tmrAlias = { form_feedback_submit: 'contact_click', contact_link_click: 'contact_click', copy_email: 'contact_click', cta_guide_click: 'guide_open' };
-    if (tmrAlias[name]) { try { (window._tmr = window._tmr || []).push({ id: '3806710', type: 'reachGoal', goal: tmrAlias[name] }); } catch (e) {} }
     if (debug && window.console) console.info('[reachGoal]', name, params, sent.length ? '→ ' + sent.join(', ') : '(счётчики не подключены)');
     return sent;
   }
@@ -77,8 +79,12 @@
     // 3) Внешние ссылки
     } else if (/^https?:$/.test(url.protocol) && url.host !== location.host) {
       reachGoal('outbound_click', { host: url.host });
-    } else if (url.protocol === 'mailto:' || url.protocol === 'tel:') {
+    }
+    // 4) Контактные ссылки (mailto/tel/мессенджеры/страница контактов) → MyTracker contact_click
+    if (url.protocol === 'mailto:' || url.protocol === 'tel:') {
       reachGoal('contact_link_click', { type: url.protocol.replace(':', '') });
+    } else if (/(^|\.)(t\.me|telegram\.me|vk\.com|vk\.me|wa\.me|whatsapp\.com)$/i.test(url.host) || /contacts\.html$/.test(url.pathname)) {
+      reachGoal('contact_link_click', { type: url.host === location.host ? 'contacts_page' : url.host });
     }
   }, true);
 
@@ -98,7 +104,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // MyTracker: открытие страницы гида — цель guide_open
-  if (/guide\.html$/.test(location.pathname)) { (window._tmr = window._tmr || []).push({ id: '3806710', type: 'reachGoal', goal: 'guide_open' }); }
+  if (/guide\.html$/.test(location.pathname)) { reachGoal('guide_open', { page: location.pathname }, { once: true }); }
 
   // 5) Активное чтение: 60 секунд на странице при видимой вкладке
   var active = 0;
