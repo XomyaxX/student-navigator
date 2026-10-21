@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-label="Иллюстрация: стол студента с ноутбуком, книгами и планом семестра">
+<defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dbe4ff"/><stop offset="1" stop-color="#e5dbff"/></linearGradient><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c6ef5"/><stop offset="1" stop-color="#7048e8"/></linearGradient></defs>
+<circle cx="270" cy="200" r="190" fill="url(#a)"/>
+<rect x="70" y="300" width="400" height="16" rx="8" fill="#495057"/>
+<rect x="150" y="150" width="230" height="145" rx="12" fill="#212529"/>
+<rect x="162" y="162" width="206" height="121" rx="6" fill="#fff"/>
+<rect x="176" y="178" width="80" height="10" rx="5" fill="#4c6ef5"/>
+<rect x="176" y="198" width="170" height="7" rx="3.5" fill="#dee2e6"/><rect x="176" y="212" width="150" height="7" rx="3.5" fill="#dee2e6"/><rect x="176" y="226" width="160" height="7" rx="3.5" fill="#dee2e6"/>
+<rect x="176" y="246" width="20" height="26" fill="#74c0fc"/><rect x="202" y="236" width="20" height="36" fill="#4c6ef5"/><rect x="228" y="252" width="20" height="20" fill="#9775fa"/><rect x="254" y="228" width="20" height="44" fill="#f59f00"/>
+<path d="M130 295h270l18 10H112Z" fill="#adb5bd"/>
+<g transform="translate(400 210)"><rect width="22" height="90" rx="3" fill="#f59f00"/><rect x="26" y="12" width="20" height="78" rx="3" fill="#37b24d"/><rect x="50" y="4" width="24" height="86" rx="3" fill="#4c6ef5"/></g>
+<g transform="translate(70 230)"><path d="M0 70h60l-6-52H6Z" fill="#ff8787"/><path d="M30 18c-4-22 8-34 22-38-2 14-10 26-22 38Z" fill="#40c057"/><path d="M30 18C24 0 10-6 0-6c4 12 14 20 30 24Z" fill="#69db7c"/></g>
+<g transform="translate(330 40)"><rect width="140" height="100" rx="12" fill="#fff" stroke="#dee2e6"/><rect x="14" y="14" width="60" height="9" rx="4.5" fill="url(#s)"/>
+<g fill="#e9ecef"><rect x="14" y="34" width="16" height="16" rx="3"/><rect x="36" y="34" width="16" height="16" rx="3"/><rect x="58" y="34" width="16" height="16" rx="3"/><rect x="80" y="34" width="16" height="16" rx="3"/><rect x="102" y="34" width="16" height="16" rx="3"/><rect x="14" y="56" width="16" height="16" rx="3"/><rect x="36" y="56" width="16" height="16" rx="3"/><rect x="80" y="56" width="16" height="16" rx="3"/><rect x="102" y="56" width="16" height="16" rx="3"/><rect x="14" y="78" width="16" height="10" rx="3"/></g>
+<rect x="58" y="56" width="16" height="16" rx="3" fill="#f59f00"/><path d="M62 64l3 3 6-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+<g transform="translate(60 70)"><circle r="34" cx="34" cy="34" fill="#fff" stroke="#dee2e6"/><path d="M34 34V14M34 34l14 8" stroke="#4c6ef5" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="34" r="4" fill="#f59f00"/></g>
+</svg>
