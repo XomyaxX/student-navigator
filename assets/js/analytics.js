@@ -27,8 +27,14 @@
 
   var fired = {};
   var TMR_ID = String(cfg.mailruId || '3806710');
-  var TMR_ALIAS = { form_feedback_submit: 'contact_click', contact_link_click: 'contact_click', copy_email: 'contact_click', cta_guide_click: 'guide_open' };
-  function tmrGoalName(name) { return TMR_ALIAS[name] || name; }
+  // MyTracker: имя цели — только латиница/цифры (без '_'). Маппим старые и канонические имена.
+  var TMR_ALIAS = {
+    contact_click: 'contactClick', contactClick: 'contactClick', form_feedback_submit: 'contactClick', contact_link_click: 'contactClick', copy_email: 'contactClick',
+    guide_open: 'guideOpen', guideOpen: 'guideOpen', cta_guide_click: 'guideOpen',
+    scroll_25: 'scroll25', scroll_50: 'scroll50', scroll_75: 'scroll75', scroll_90: 'scroll90'
+  };
+  function tmrGoalName(name) { return TMR_ALIAS[name] || String(name).replace(/[^A-Za-z0-9]/g, ''); }
+  window.tmrGoalName = tmrGoalName;
   function reachGoal(name, params, opts) {
     params = params || {};
     opts = opts || {};
@@ -37,7 +43,7 @@
     var ymId = detectYandexId();
     try { if (typeof window.ym === 'function' && ymId) { window.ym(ymId, 'reachGoal', name, params); sent.push('yandex'); } } catch (e) {}
     try {
-      // MyTracker / Top.Mail.ru 3806710: одна отправка, имя цели приводится к каноническому (contact_click, guide_open, scroll_NN)
+      // MyTracker / Top.Mail.ru 3806710: одна отправка, имя цели приводится к каноническому (contactClick, guideOpen, scroll25/50/75/90)
       var tn = tmrGoalName(name);
       if (tn) {
         var t = { id: TMR_ID, type: 'reachGoal', goal: tn };
@@ -104,7 +110,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // MyTracker: открытие страницы гида — цель guide_open
-  if (/guide\.html$/.test(location.pathname)) { reachGoal('guide_open', { page: location.pathname }, { once: true }); }
+  if (/\/guide(\.html)?\/?$/.test(location.pathname)) { reachGoal('guide_open', { page: location.pathname }, { once: true }); }
 
   // 5) Активное чтение: 60 секунд на странице при видимой вкладке
   var active = 0;
